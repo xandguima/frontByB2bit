@@ -1,30 +1,86 @@
-# React + TypeScript + Vite
+# TesteType
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um projeto de exemplo usando React e Vite.
 
-Currently, two official plugins are available:
+## Pré-requisitos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Certifique-se de ter as seguintes ferramentas instaladas em sua máquina:
 
-## Expanding the ESLint configuration
+- [Node.js](https://nodejs.org/) (versão 14 ou superior)
+- [npm](https://www.npmjs.com/) (geralmente vem junto com o Node.js)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Instalação
 
-- Configure the top-level `parserOptions` property like this:
+Siga os passos abaixo para configurar o projeto em sua máquina:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+1. Clone o repositório:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+    ```sh
+    git clone [https://github.com/seu-usuario/testetype.git](https://github.com/xandguima/frontByB2bit.git)
+    ```
+
+2. Navegue até o diretório do projeto:
+
+    ```sh
+    cd frontByB2bit
+    ```
+
+3. Instale as dependências:
+
+    ```sh
+    npm install
+    ```
+
+## Scripts Disponíveis
+
+No diretório do projeto, você pode executar os seguintes comandos:
+
+### `npm run dev`
+
+Executa o aplicativo no modo de desenvolvimento.\
+Abra [http://localhost:5173](http://localhost:5173) para ver o projeto no navegador.
+
+A página será recarregada quando você fizer alterações.\
+Você também verá erros de lint no console.
+
+
+
+### `npm run preview`
+
+Executa uma versão prévia local da build de produção, ideal para testes locais.
+
+### `npm run cy:open`
+
+Abre o Cypress para testes end-to-end. Certifique-se de que seu servidor de desenvolvimento esteja em execução antes de executar este comando.
+
+
+## Dependências
+
+### Produção
+
+- `axios`: ^1.6.8
+- `js-cookie`: ^3.0.5
+- `react`: ^18.2.0
+- `react-dom`: ^18.2.0
+- `react-router-dom`: ^6.23.1
+
+### Desenvolvimento
+
+- `@types/js-cookie`: ^3.0.6
+- `@types/react`: ^18.2.66
+- `@types/react-dom`: ^18.2.22
+- `@typescript-eslint/eslint-plugin`: ^7.2.0
+- `@typescript-eslint/parser`: ^7.2.0
+- `@vitejs/plugin-react`: ^4.2.1
+- `autoprefixer`: ^10.4.19
+- `cypress`: ^13.9.0
+- `eslint`: ^8.57.0
+- `eslint-plugin-react-hooks`: ^4.6.0
+- `eslint-plugin-react-refresh`: ^0.4.6
+- `file-loader`: ^6.2.0
+- `postcss`: ^8.4.38
+- `tailwindcss`: ^3.4.3
+- `typescript`: ^5.2.2
+- `vite`: ^5.2.11
+
+
