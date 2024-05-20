@@ -1,4 +1,4 @@
-import React, { createContext, useContext,useState, ReactNode,useEffect} from "react";
+import React, { createContext, useContext,useState} from "react";
 import Api from '../services/api';
 import Cookies from "js-cookie";
 
@@ -23,22 +23,19 @@ function AuthProvider({ children }: AuthProviderProps) {
   async function signIn({ email, password }:{email: string; password: string}) {
     const api = new Api();
     const responsePost = await api.post('/login/',  email, password );
-    console.log("responsePost do signIn: ", responsePost.tokens.access);
     const accessToken = responsePost.tokens.access;
-    console.log("accessToken do signIn: ", accessToken);
+    
     Cookies.set('accessToken', accessToken);
     
     const responseGet = await api.get('/profile/');
     
     const user = responseGet;
-    console.log("user do get sing in: ", user);
+    
     const { email: userEmail, avatar: { high } ,name} = user;
     
     const userFiltered = {email: userEmail, high, name};
     
     Cookies.set('user', JSON.stringify(userFiltered));
-    console.log("cookie - accessToken: ", Cookies.get('accessToken'));
-    console.log("cookie - user: ", Cookies.get('user'));
 
 
     setData({userFiltered, accessToken});
