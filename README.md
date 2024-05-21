@@ -16,7 +16,7 @@ Siga os passos abaixo para configurar o projeto em sua máquina:
 1. Clone o repositório:
 
     ```sh
-    git clone https://github.com/seu-usuario/testetype.git
+    git clone https://github.com/xandguima/frontByB2bit.git
     ```
 
 2. Navegue até o diretório do projeto:
