@@ -10,9 +10,13 @@ import { useState } from 'react';
 export function SignIn() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
+  
   const {signIn} = useAuth();
   function handleSignIn() {
+    if(!email || !password){
+      return alert('Preencha todos os campos');
+
+    }
     signIn({email, password});
   }
   
@@ -25,7 +29,7 @@ export function SignIn() {
         <Input type='email' label='E-mail' placeholder='E-mail' onChange={(e) => setEmail(e.target.value)}/>
         <Input type='password' label='Password' placeholder='Password' onChange={(e) => setPassword(e.target.value)}/>
 
-        <CustomButton title='Sign In' onClick={handleSignIn}/>
+        <CustomButton title='Sign In'type='submit' onClick={handleSignIn}/>
       </div>
 
     </div>
